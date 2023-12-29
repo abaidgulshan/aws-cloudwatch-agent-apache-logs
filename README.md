@@ -4,19 +4,18 @@ This repository contains configuration files and scripts to set up the AWS Cloud
 
 ## Table of Contents
 
-* [AWS CloudWatch Agent for Apache Logs](#aws-cloudwatch-agent-for-apache-logs)
-   * [Table of Contents](#table-of-contents)
-   * [Introduction](#introduction)
+   * [Introduction 📚](#introduction-)
    * [Getting Started 🛠️](#getting-started-️)
       * [Prerequisites 📋](#prerequisites-)
       * [Installation Steps 🚀](#installation-steps-)
-         * [Create and configure an EC2 instance](#create-and-configure-an-ec2-instance)
-         * [Install the CloudWatch Agent](#install-the-cloudwatch-agent)
-         * [Create the CloudWatch Agent configuration file](#create-the-cloudwatch-agent-configuration-file)
-         * [Configure Apache HTTP Server](#configure-apache-http-server)
+         * [Create and configure an EC2 instance 🏗️](#create-and-configure-an-ec2-instance-️)
+         * [Install the CloudWatch Agent 🔧](#install-the-cloudwatch-agent-)
+         * [Create the CloudWatch Agent configuration file ⚙️](#create-the-cloudwatch-agent-configuration-file-️)
+         * [Configure Apache HTTP Server 🛠️](#configure-apache-http-server-️)
 
 
-## Introduction
+
+## Introduction 📚
 
 Explain briefly what your project does and what problem it solves. Provide context and motivation for users to explore and use your AWS CloudWatch Agent setup for Apache logs.
 
@@ -31,16 +30,16 @@ Follow these steps to set up the CloudWatch Agent for Apache Logs:
 
 ### Installation Steps 🚀
 
-#### Create and configure an EC2 instance
+#### Create and configure an EC2 instance 🏗️
 To try out CloudWatch Logs Insights, we need to have a web server that is generating logs. If you want to do this on a server you already have, skip to Step 2: Installing the CloudWatch Agent. If you want to set up a test web server so that you can try this out, follow the instructions in our Tutorial: [Install a LAMP Web Server on Amazon Linux 2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html).
 
-#### Install the CloudWatch Agent
+#### Install the CloudWatch Agent 🔧
 You can install the unified CloudWatch Agent via the command line with an Amazon S3 download link, AWS Systems Manager, or an AWS CloudFormation template. To install the CloudWatch Agent, follow the instructions below:
 
 1. [Download and configure the CloudWatch Agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html)
 2. [Create the IAM role for the CloudWatch Agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent-commandline.html)
 3. [Attach the role to your EC2 instance](https://aws.amazon.com/blogs/security/easily-replace-or-attach-an-iam-role-to-an-existing-ec2-instance-by-using-the-ec2-console/)
-#### Create the CloudWatch Agent configuration file
+#### Create the CloudWatch Agent configuration file ⚙️
 * After following the CloudWatch Agent installation instructions in the previous step, you can create the configuration file using the [agent configuration file wizard](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file-wizard.html) with the following command:
 
 * `sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard`
@@ -59,7 +58,7 @@ You can install the unified CloudWatch Agent via the command line with an Amazon
     * Log stream name: [{instance_id}]
     * ![image](https://github.com/abaidgulshan/aws-cloudwatch-agent-apache-logs/assets/7329596/1535a3cd-08ed-4789-aa73-a4d785862ffd)
 
-#### Configure Apache HTTP Server
+#### Configure Apache HTTP Server 🛠️
 Run the following command to open the Apache HTTP Server configuration file:
 ```
 sudo nano /etc/httpd/conf/httpd.conf
