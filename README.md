@@ -81,13 +81,7 @@ ErrorLogFormat "{\"time\":\"%{%usec_frac}t\", \"function\" : \"[%-m:%l]\",\"proc
 
 The default Apache log file format is space-separated data with one line per request. There is no native support for JSON in Apache, but with some clever formatting we can make the single line into valid JSON syntax. To do so, you can add the new LogFormat line:
 ```
-LogFormat "{ \"time\":\"%{%Y-%m-%d}tT%{%T}t.%{msec_frac}tZ\", \"process\":\"%D\",
-
-\"filename\":\"%f\", \"remoteIP\":\"%a\", \"host\":\"%V\", \"request\":\"%U\",
-
-\"query\":\"%q\",\"method\":\"%m\", \"status\":\"%>s\",
-
-\"userAgent\":\"%{User-agent}i\",\"referer\":\"%{Referer}i\"}" cloudwatch
+LogFormat "{ \"time\":\"%{%Y-%m-%d}tT%{%T}t.%{msec_frac}tZ\", \"process\":\"%D\",\"filename\":\"%f\", \"remoteIP\":\"%a\", \"host\":\"%V\", \"request\":\"%U\",\"query\":\"%q\",\"method\":\"%m\", \"status\":\"%>s\",\"userAgent\":\"%{User-agent}i\",\"referer\":\"%{Referer}i\"}" cloudwatch
 ```
 
 Change the following access log location to logs/access/access_log:
