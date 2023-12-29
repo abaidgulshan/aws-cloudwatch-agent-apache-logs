@@ -4,13 +4,17 @@ This repository contains configuration files and scripts to set up the AWS Cloud
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Getting Started](#Getting-Started)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+* [AWS CloudWatch Agent for Apache Logs](#aws-cloudwatch-agent-for-apache-logs)
+   * [Table of Contents](#table-of-contents)
+   * [Introduction](#introduction)
+   * [Getting Started 🛠️](#getting-started-️)
+      * [Prerequisites 📋](#prerequisites-)
+      * [Installation Steps 🚀](#installation-steps-)
+         * [Create and configure an EC2 instance](#create-and-configure-an-ec2-instance)
+         * [Install the CloudWatch Agent](#install-the-cloudwatch-agent)
+         * [Create the CloudWatch Agent configuration file](#create-the-cloudwatch-agent-configuration-file)
+         * [Configure Apache HTTP Server](#configure-apache-http-server)
+
 
 ## Introduction
 
